@@ -60,15 +60,15 @@ def getUserInsights( params ) :
 params = getCreds() # get creds
 response = getUserMedia( params ) # get users media from the api
 
-print "\n---- LATEST POST -----\n" # section header
-print "\tLink to post:" # link to post
-print "\t" + response['json_data']['data'][0]['permalink'] # link to post
-print "\n\tPost caption:" # post caption
-print "\t" + response['json_data']['data'][0]['caption'] # post caption
-print "\n\tMedia Type:" # type of media
-print "\t" + response['json_data']['data'][0]['media_type'] # type of media
-print "\n\tPosted at:" # when it was posted
-print "\t" + response['json_data']['data'][0]['timestamp'] # when it was posted
+print ("\n---- LATEST POST -----\n") # section header
+print ("\tLink to post:") # link to post
+print ("\t" + response['json_data']['data'][0]['permalink']) # link to post
+print ("\n\tPost caption:") # post caption
+print ("\t" + response['json_data']['data'][0]['caption']) # post caption
+print ("\n\tMedia Type:") # type of media
+print ("\t" + response['json_data']['data'][0]['media_type']) # type of media
+print ("\n\tPosted at:") # when it was posted
+print ("\t" + response['json_data']['data'][0]['timestamp']) # when it was posted
 
 params['latest_media_id'] = response['json_data']['data'][0]['id'] # store latest post id
 
@@ -76,20 +76,23 @@ if 'VIDEO' == response['json_data']['data'][0]['media_type'] : # media is a vide
 	params['metric'] = 'engagement,impressions,reach,saved,video_views'
 else : # media is an image
 	params['metric'] = 'engagement,impressions,reach,saved'
-
+"""
 response = getMediaInsights( params ) # get insights for a specific media id
 
-print "\n---- LATEST POST INSIGHTS -----\n" # section header
+print ("\n---- LATEST POST INSIGHTS -----\n") # section header
 
-for insight in response['json_data']['data'] : # loop over post insights
-	print "\t" + insight['title'] + " (" + insight['period'] + "): " + str( insight['values'][0]['value'] ) # display info
-
+for insight in response['json_data']['data']: # loop over post insights
+	print ("\t" + insight['title'] + " (" + insight['period'] + "): " + str( insight['values'][0]['value'] )) # display info
+"""
 response = getUserInsights( params ) # get insights for a user
 
-print "\n---- DAILY USER ACCOUNT INSIGHTS -----\n" # section header
+print ("\n---- DAILY USER ACCOUNT INSIGHTS -----\n") # section header
 
 for insight in response['json_data']['data'] : # loop over user account insights
-	print "\t" + insight['title'] + " (" + insight['period'] + "): " + str( insight['values'][0]['value'] ) # display info
+	print ("\t" + insight['title'] + " (" + insight['period'] + "): " + str( insight['values'][0]['value'] )) # display info
 
 	for value in insight['values'] : # loop over each value
-		print "\t\t" + value['end_time'] + ": " + str( value['value'] ) # print out counts for the date
+		print ("\t\t" + value['end_time'] + ": " + str( value['value'] )) # print out counts for the date
+
+
+print(response['json_data']['data'])

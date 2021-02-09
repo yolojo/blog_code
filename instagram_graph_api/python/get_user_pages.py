@@ -22,10 +22,10 @@ params = getCreds() # get creds
 params['debug'] = 'no' # set debug
 response = getUserPages( params ) # get debug info
 
-print "\n---- FACEBOOK PAGE INFO ----\n" # section heading
-print "Page Name:" # label
-print response['json_data']['data'][0]['name'] # display name
-print "\nPage Category:" # label
-print response['json_data']['data'][0]['category'] # display category
-print "\nPage Id:" # label
-print response['json_data']['data'][0]['id'] # display id
+print ("\n---- FACEBOOK PAGE INFO ----\n") # section heading
+print ("Page Name:") # label
+print (response['json_data']['data'][0]['name']) # display name
+print ("\nPage Category:") # label
+print (response['json_data']['data'][0]['category']) # display category
+print ("\nPage Id:") # label
+print (response['json_data']['data'][0]['id']) # display id

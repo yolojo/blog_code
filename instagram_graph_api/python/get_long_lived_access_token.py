@@ -25,6 +25,6 @@ params = getCreds() # get creds
 params['debug'] = 'yes' # set debug
 response = getLongLivedAccessToken( params ) # hit the api for some data!
 
-print "\n ---- ACCESS TOKEN INFO ----\n" # section header
-print "Access Token:"  # label
-print response['json_data']['access_token'] # display access token
+print ("\n ---- ACCESS TOKEN INFO ----\n") # section header
+print ("Access Token:")  # label
+print (response['json_data']['access_token']) # display access token

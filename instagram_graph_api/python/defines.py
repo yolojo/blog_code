@@ -10,16 +10,16 @@ def getCreds() :
 	"""
 
 	creds = dict() # dictionary to hold everything
-	creds['access_token'] = 'ACCESS-TOKEN' # access token for use with all api calls
-	creds['client_id'] = 'FB-APP-CLIENT-ID' # client id from facebook app IG Graph API Test
-	creds['client_secret'] = 'FB-APP-CLIENT-SECRET' # client secret from facebook app
+	creds['access_token'] = 'EAADWbWMZBh7UBALc5L6YtQC6STADVSyNaNWb0ltGU8KiJylekJcYzNZCnq9mAHzgQWP0FZCKZCdLgMZCgITLtyJXVcCBImizwZCZCwihD2aI8bVevZA3ZCa4q7IPAZCMJ51ezmWZAs3ZANMZClMEz6iHZAjQBdgXSCWZAqbJGZCIYhH9lR98MgZDZD' # access token for use with all api calls
+	creds['client_id'] = '235765304821685' # client id from facebook app IG Graph API Test
+	creds['client_secret'] = '02fd8da57d1cca1bfd484c707ab92e7d' # client secret from facebook app
 	creds['graph_domain'] = 'https://graph.facebook.com/' # base domain for api calls
 	creds['graph_version'] = 'v6.0' # version of the api we are hitting
 	creds['endpoint_base'] = creds['graph_domain'] + creds['graph_version'] + '/' # base endpoint with domain and version
 	creds['debug'] = 'no' # debug mode for api call
-	creds['page_id'] = 'FB-PAGE-ID' # users page id
-	creds['instagram_account_id'] = 'INSTAGRAM-BUSINESS-ACCOUNT-ID' # users instagram account id
-	creds['ig_username'] = 'IG-USERNAME' # ig username
+	creds['page_id'] = '185587902900027' # users page id
+	creds['instagram_account_id'] = '17841414173191824' # users instagram account id
+	creds['ig_username'] = 'shotbyolo' # ig username
 
 	return creds
 
@@ -53,9 +53,13 @@ def makeApiCall( url, endpointParams, debug = 'no' ) :
 def displayApiCallData( response ) :
 	""" Print out to cli response from api call """
 
-	print "\nURL: " # title
-	print response['url'] # display url hit
-	print "\nEndpoint Params: " # title
-	print response['endpoint_params_pretty'] # display params passed to the endpoint
-	print "\nResponse: " # title
-	print response['json_data_pretty'] # make look pretty for cli
+	print ("\nURL: ") # title
+	print (response['url']) # display url hit
+	print ("\nEndpoint Params: ") # title
+	print (response['endpoint_params_pretty']) # display params passed to the endpoint
+	print ("\nResponse: ") # title
+	print (response['json_data_pretty']) # make look pretty for cli
+
+
+
+

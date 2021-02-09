@@ -20,11 +20,11 @@ def getInstagramAccount( params ) :
 	return makeApiCall( url, endpointParams, params['debug'] ) # make the api call
 
 params = getCreds() # get creds
-params['debug'] = 'no' # set debug
+params['debug'] = 'yes' # set debug
 response = getInstagramAccount( params ) # get debug info
 
-print "\n---- INSTAGRAM ACCOUNT INFO ----\n"
-print "Page Id:" # label
-print response['json_data']['id'] # display the page id
-print "\nInstagram Business Account Id:" # label
-print response['json_data']['instagram_business_account']['id'] #display the instagram account id
+print ("\n---- INSTAGRAM ACCOUNT INFO ----\n")
+print ("Page Id:") # label
+print (response['json_data']['id']) # display the page id
+print ("\nInstagram Business Account Id:") # label
+print (response['json_data']['instagram_business_account']['id']) #display the instagram account id
