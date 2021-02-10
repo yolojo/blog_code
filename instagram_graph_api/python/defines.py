@@ -10,7 +10,7 @@ def getCreds() :
 	"""
 
 	creds = dict() # dictionary to hold everything
-	creds['access_token'] = 'EAADWbWMZBh7UBALc5L6YtQC6STADVSyNaNWb0ltGU8KiJylekJcYzNZCnq9mAHzgQWP0FZCKZCdLgMZCgITLtyJXVcCBImizwZCZCwihD2aI8bVevZA3ZCa4q7IPAZCMJ51ezmWZAs3ZANMZClMEz6iHZAjQBdgXSCWZAqbJGZCIYhH9lR98MgZDZD' # access token for use with all api calls
+	creds['access_token'] = 'Access Token' # access token for use with all api calls
 	creds['client_id'] = '235765304821685' # client id from facebook app IG Graph API Test
 	creds['client_secret'] = '02fd8da57d1cca1bfd484c707ab92e7d' # client secret from facebook app
 	creds['graph_domain'] = 'https://graph.facebook.com/' # base domain for api calls
